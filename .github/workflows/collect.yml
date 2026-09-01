@@ -1,7 +1,5 @@
 name: Recopilar vuelos
 on:
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 jobs:
   collect:
@@ -15,4 +13,3 @@ jobs:
       - run: python scripts/collect.py
         env:
           AIRLABS_API_KEY: ${{ secrets.AIRLABS_API_KEY }}
-
